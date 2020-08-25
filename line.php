@@ -23,7 +23,7 @@ if ( sizeof($request_array['events']) > 0 )
 		$text = $event['message']['text'];
 		
 	   	if($text == "ชื่ออะไรจ๊ะ" || $text == "ชื่ออะไร" || $text == "ชื่ออะไรคะ" || $text == "ชื่ออะไรครับ"){
-			$reply_message = 'เรามีชื่อว่า ไข่ย้อย :)';
+			$reply_message = 'เรามีชื่อว่า ไข่ย้อย :) เจ้าของบอทชื่อนราพร พงษ์ศิริ';
 		}
 	  	if($text == "สถานการณ์โควิดวันนี้" || $text == "covid19" || $text == "covid-19" || $text == "Covid-19"){
 		     $url = 'https://covid19.th-stat.com/api/open/today';
@@ -43,6 +43,15 @@ if ( sizeof($request_array['events']) > 0 )
     		}
 	   	if($text == "CDMA" || $text == "cdma"){
 			$reply_message = '+1, -3, -1, -1';
+		}
+		if($text == "น้ำหนัก" || $text == "น้ำหนักเท่าไหร่"){
+			$reply_message = '67 กิโลกรัม';
+		}
+	   	if($text == "ส่วนสูง" || $text == "ส่วนสูงเท่าไหร่"){
+			$reply_message = '160 เซนติเมตร';
+		}
+	   	if($text == "วันเกิด" || $text == "เกิดวันไหน"){
+			$reply_message = 'วันจันทร์ที่ 10 มกราคม พ.ศ.2543';
 		}
 		//$reply_message = '('.$text.') ได้รับข้อความเรียบร้อย!!';   
    }
